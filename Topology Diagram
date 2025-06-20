@@ -31,3 +31,16 @@
                                 |
                                 v
                        [📊 Dashboard or API Output]
+
+
+| Component                    | Description                                                                           |
+| ---------------------------- | ------------------------------------------------------------------------------------- |
+| **Frontend/API**             | Optional. Could be a Power Automate dashboard, Streamlit UI, or mobile/web client.    |
+| **Azure Function App (MCP)** | Orchestrator. Routes tasks to child agents, collects results                          |
+| **Technical Agent**          | Analyzes moving averages, RSI, trends using `yfinance` & `TA-Lib`                     |
+| **Fundamental Agents (2)**   | Analyze balance sheet, earnings, sector comparison using `yfinance` or financial APIs |
+| **News Agent**               | Scrapes or queries APIs like NewsAPI for sentiment analysis                           |
+| **Strategy Agent**           | Synthesizes all inputs, uses GPT to decide buy/sell timing                            |
+| **Storage**                  | Stores results in Azure Blob, Table, or SQL (optional but useful)                     |
+| **Dashboard/API Output**     | View recommendations or integrate with trading apps                                   |
+
