@@ -1,0 +1,33 @@
+                       [🖥️ Frontend or API Consumer]
+                                 |
+                                 v
+                        [🌩️ Azure Function App]
+                                (Main MCP)
+                                 |
+       ┌─────────────────────────┼────────────────────────────┐
+       |                         |                            |
+       v                         v                            v
+[📈 Tech Analysis Agent]  [💰 Fund Analysis 1]        [💼 Fund Analysis 2]
+ (Azure Function)         (Azure Function)             (Azure Function)
+       |                         |                            |
+       |                         |                            |
+[🟢 TA-Lib, YFinance]   [🟢 YFinance, P/E]         [🟢 Competitor Data]
+       |
+       v
+[📰 News Agent - Azure Function]
+       |
+       v
+[🗞️ NewsAPI, Web Scraping]
+
+                ↘️ All responses returned to ↙️
+
+                        [📊 Strategy Agent]
+                  (Azure Function + GPT Reasoning)
+                                |
+                        [🏦 Buy/Sell Advice]
+                                |
+                                v
+                       [📁 Storage (DB/Blob)] — optional
+                                |
+                                v
+                       [📊 Dashboard or API Output]
